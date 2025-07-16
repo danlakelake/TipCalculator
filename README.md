@@ -1,4 +1,4 @@
 # Tip Calculator - Calculadora de Propinas
 
-**Puedes ver la versión desplegada de la app aquí:**\
+🔗 **Live demo / Demo en línea:**\
 https://cool-arithmetic-07f879.netlify.app/
