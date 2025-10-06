@@ -1,64 +1,70 @@
-<html>
-
-<head>
-    <title>Tip Calculator</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator - Calculadora de Propinas</title>
     <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Main container -->
     <div id="container">
-        <h1>Tip Calculator</h1>
-        <!-- Calculator container -->
-        <div id="calculator">
-            <form action="">
-                <!-- Lable Bill -->
-                <label>How much was your bill?
-                    <br>
-                    <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span>
-                    <input type="number" id="bill-amount" placeholder="0.00" min="0" step=".01">
-                </label>
-                <!-- Lable Service -->
-                <label>How was your service?
-                    <br>
-                    <!-- Face icon -->
-                    <span id="small-face">
-                        <i id="happy-face" class="fa-sharp fa-solid fa-face-smile"></i>
-                    </span>
+      <!-- Lang container -->
+      <div class="lang-container">
+        <button id="langSwitch">EN</button>
+      </div>
+      <h1 data-i18n="mainTitle">Tip Calculator</h1>
+      <!-- Calculator container -->
+      <div id="calculator">
+        <form action="">
+          <!-- Lable Bill -->
+          <div class="input-group">
+            <label data-i18n="firstLabel">How much was your bill?</label>
+            <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span>
+            <input type="number" id="bill-amount" placeholder="0.00" min="0" step=".01" />
+          </div>
+          <!-- Lable Service -->
+          <div class="input-group">
+            <label data-i18n="secondLabel">How was your service?</label>
+            <!-- Face icon -->
+            <span id="small-face">
+              <i id="happy-face" class="fa-sharp fa-solid fa-face-smile"></i>
+            </span>
+            <select id="service-quality">
+              <option data-i18n="chooseAnOption" disabled selected value="0">-- Choose an option --</option>
+              <option data-i18n="serviceOptionOne" value="0.3">30% - Oustanding</option>
+              <option data-i18n="serviceOptionTwo" value="0.2">20% - Good</option>
+              <option data-i18n="serviceOptionThree" value="0.15">15% - It was okay</option>
+              <option data-i18n="serviceOptionFour" value="0.10">10% - Bad</option>
+              <option data-i18n="serviceOptionFive" value="0.05">5% - Terrible</option>
+            </select>
+          </div>
+          <!-- Lable Total People Bill -->
+          <div class="input-group">
+            <label data-i18n="thirdLabel">How many people are sharing the bill?</label>
+            <span><i class="fa-sharp fa-solid fa-user"></i></span>
+            <input type="number" id="total-people" placeholder="1" min="0" />
+          </div>
+          <button type="button" data-i18n="btnCalculate" id="calculate">Calculate!</button>
+        </form>
+      </div>
 
-                    <select id="service-quality">
-                        <option disabled selected value="0">-- Choose an option --</option>
-                        <option value="0.3">30% - Oustanding</option>
-                        <option value="0.2">20% - Good</option>
-                        <option value="0.15">15% - It was okay</option>
-                        <option value="0.10">10% - Bad</option>
-                        <option value="0.05">5% - Terrible</option>
-                    </select>
-                </label>
-                <!-- Lable Total People Bill -->
-                <label>How many people are sharing the bill?
-                    <br>
-                    <span><i class="fa-sharp fa-solid fa-user"></i></span>
-                    <input type="number" id="total-people" placeholder="1" min="0"> People
-                </label>
-                <button type="button" id="calculate">Calculate!</button>
-            </form>
-        </div>
-
-        <!-- Total Tip -->
-        <div id="total-tip">
-            <sup>$</sup><span id="tip">0.00</span>
-            <small id="each">each person</small>
-        </div>
-
+      <!-- Total Tip -->
+      <div id="total-tip">
+        <span id="tip-label" data-i18n="fourthLabel">TIP AMOUNT</span>
+        <sup>$</sup>
+        <span id="tip">0.00</span>
+      </div>
+      <div id="each">
+        <span id="each-label" data-i18n="eachText">each person</span>
+      </div>
     </div>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/lang.js"></script>
     <!-- Icons -->
     <script src="assets/fontawesome/all.min.js"></script>
-
-</body>
-
+  </body>
 </html>

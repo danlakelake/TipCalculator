@@ -1,103 +1,124 @@
 /* styles css */
 :root {
-    --cherry: #532827;
-    --light-cherry: #6c2726;
-    --dark-cherry: #4c2827;
-    --black: #000;
-    --white: #ddd;
+  --cherry: #532827;
+  --light-cherry: #6c2726;
+  --dark-cherry: #4c2827;
+  --black: #000;
+  --white: #ddd;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background: #333 url("assets/img/cutlery.jpg") center center no-repeat;
-    background-size: cover;
-    color: var(--cherry);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: #333 url('assets/img/cutlery.jpg') center center no-repeat;
+  background-size: cover;
+  color: var(--cherry);
 }
 
 #container {
-    width: 400px;
-    margin: 40px auto 0px;
-    padding: 50px;
-    box-sizing: border-box;
-    background: url("assets/img/paper-pattern.jpg") top left repeat;
-    box-shadow: 0 10px 15px -8px var(--black);
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    text-align: center;
+  width: 400px;
+  margin: 40px auto 0px;
+  padding: 50px;
+  box-sizing: border-box;
+  background: url('assets/img/paper-pattern.jpg') top left repeat;
+  box-shadow: 0 10px 15px -8px var(--black);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.lang-container {
+  padding: 0 0 1.5rem 0;
+  display: flex;
+  justify-content: end;
+}
+
+.lang-container #langSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7%;
+  width: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.3rem 1.5rem;
+  font-size: 15px;
 }
 
 h1 {
-    margin: 0 0 20px;
-    padding: 0 0 20px;
-    border-bottom: 1px solid var(--white);
+  margin: 0 0 20px;
+  padding: 0 0 20px;
+  border-bottom: 1px solid var(--white);
 }
 
 /* Form */
 form {
-    text-align: left;
+  text-align: left;
+}
+
+form .input-group {
+  margin: 25px 0;
 }
 
 form label {
-    display: block;
-    margin: 25px 0;
-    font-family: bold;
-    font-size: 17px;
+  display: block;
+
+  font-family: bold;
+  font-size: 17px;
 }
 
 form input,
 form select {
-    padding: 8px;
-    margin: 10px 0;
+  padding: 8px;
+  margin: 10px 0;
 }
 
-form input[type="text"] {
-    width: 90px;
+form input[type='text'] {
+  width: 90px;
 }
 
 button {
-    background-color: var(--light-cherry);
-    color: var(--white);
-    border: none;
-    border-bottom: 4px solid #222;
-    text-transform: uppercase;
-    font-size: 18px;
-    padding: 20px 30px;
-    width: 100%;
+  background-color: var(--light-cherry);
+  color: var(--white);
+  border: none;
+  border-bottom: 4px solid #222;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 20px 30px;
+  width: 100%;
 }
 
 button:hover {
-    background-color: var(--dark-cherry);
-    border-bottom-color: var(--black);
+  background-color: var(--dark-cherry);
+  border-bottom-color: var(--black);
 }
 
 button:active {
-    position: relative;
-    top: 1px;
+  position: relative;
+  top: 1px;
 }
 
 /* Total tip */
 
-#total-tip {
-    font-size: 50px;
-    margin-top: 40px;
+#total-tip #tip-label {
+  font-size: 15px;
+  margin-top: 40px;
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
 }
 
-#total-tip:before {
-    content: "Tip amount";
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
+#total-tip #tip {
+  font-size: 50px;
 }
 
 #total-tip sup {
-    font-size: 24px;
-    top: -18px;
+  font-size: 24px;
+  top: -18px;
 }
 
-#total-tip small {
-    font-size: 14px;
-    font-weight: bold;
-    display: block;
+#total-tip #each-label {
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
 }
