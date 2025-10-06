@@ -1,6 +1,7 @@
 // Traducciones
 const translations = {
   en: {
+    title: 'Tip Calculator',
     mainTitle: 'Tip Calculator',
     firstLabel: 'How much was your bill?',
     secondLabel: 'How was your service?',
@@ -20,6 +21,7 @@ const translations = {
     alertSelectService: 'Please select a service option',
   },
   es: {
+    title: 'Calculadora de Propinas',
     mainTitle: 'Calculadora de Propinas',
     firstLabel: '¿Cuánto fue tu cuenta?',
     secondLabel: '¿Cómo fue tu servicio?',
